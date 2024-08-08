@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDU 창조경제</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: flex-start; /* 왼쪽 정렬 */
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .concepts {
+            flex: 1;
+            padding: 20px;
+            border-right: 2px solid #ecf0f1;
+            max-width: 250px; /* 최대 너비 설정 */
+        }
+        .content {
+            flex: 2;
+            padding: 20px;
+            text-align: left; /* 왼쪽 정렬 */
+        }
+        .header {
+            font-weight: bold;
+            color: #ecf0f1; /* 흰색 */
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            font-size: 24px;
+        }
+        .excel-container {
+            background: linear-gradient(white, #dce6f1);
+            padding: 10px; /* 패딩 줄이기 */
+            border: 1px solid #2980b9;
+            margin: 0; /* 왼쪽으로 붙이기 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: auto; /* 자동 너비 */
+            overflow-x: auto; /* 가로 스크롤 */
+        }
+        .excel-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px; /* 글자 크기 */
+        }
+        .excel-table th, .excel-table td {
+            border: 1px solid #2980b9;
+            padding: 8px; /* 패딩 */
+            color: #2c3e50; /* 글자 색상 검정으로 변경 */
+        }
+        .excel-table th {
+            background-color: #2980b9;
+            color: white;
+        }
+        .excel-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .small-title {
+            font-size: 20px; /* 작은 제목 글자 크기 설정 */
+            color: #ecf0f1;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">KDU 창조경제</div>
+    <div class="container">
+        <div class="concepts">
+            <p><strong>ROE (Return on Equity):</strong> 주주 자본 수익률, 순이익을 주주 자본으로 나눈 비율.</p>
+            <p><strong>GPA (Gross Profit Margin):</strong> 매출 총이익률, 총이익을 매출액으로 나눈 비율.</p>
+            <p><strong>CFO (Cash Flow from Operations):</strong> 영업활동으로 인한 현금 흐름.</p>
+            <p><strong>DY (Dividend Yield):</strong> 배당 수익률, 주당 배당금을 주가로 나눈 비율.</p>
+            <p><strong>PBR (Price to Book Ratio):</strong> 주가순자산비율, 주가를 주당 순자산가치로 나눈 비율.</p>
+            <p><strong>PCR (Price to Cash Flow Ratio):</strong> 주가현금흐름비율, 주가를 주당 현금흐름으로 나눈 비율.</p>
+            <p><strong>PER (Price to Earnings Ratio):</strong> 주가수익비율, 주가를 주당 순이익으로 나눈 비율.</p>
+            <p><strong>PSR (Price to Sales Ratio):</strong> 주가매출비율, 주가를 주당 매출액으로 나눈 비율.</p>
+            <p><strong>12M:</strong> 12개월(1년) 동안의 누적 수익률을 나타내는 지표.</p> 
+            <p><strong>K-Ratio:</strong> 주식의 누적 수익률의 기울기를 표준 오차로 나눈 비율, 주식의 꾸준하고 일관된 상승을 평가하는 지표.</p>
+        </div>
+        <div class="content">
+            <h1 class="small-title">이달의 추천 종목!!!</h1>
+            <div class="excel-container">
+                {{ excel_data | safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
